@@ -56,6 +56,8 @@ ro.usb.connect2pc=true
 persist.hdmi.ui.state=1
 sys.hwc.device.primary=HDMI-A
 
+# resolution
+persist.sys.resolution.main=1280x720@60
 # adb network
 persist.internet.adb.enable=1
 

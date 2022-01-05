@@ -1,4 +1,4 @@
-$(warning build Overlay-bizerba...... )
+$(warning build Overlay-bizerba......... )
 
 LOCAL_PATH:= $(call my-dir)
 
@@ -18,7 +18,7 @@ LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, $(res_dir))
 # (the default package target doesn't seem to deal with multiple asset dirs)
 LOCAL_ASSET_DIR := $(LOCAL_PATH)/assets
 
-LOCAL_STATIC_JAVA_LIBRARIES := android-common
+LOCAL_STATIC_JAVA_LIBRARIES := android-common com.android.javamodule
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-v4
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-appcompat
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-gridlayout
@@ -36,8 +36,14 @@ LOCAL_OVERRIDES_PACKAGES += \
    Browser2 \
    BrowserTests \
    Calculator \
+   ExactCalculator \
+   ExactCalculatorTests \
+   Calendar \
+   CalendarProvider \
    Camera \
    Clock \
+   AlarmClock \
+   DeskClock \
    Contacts \
    Email \
    EmailTests \
@@ -50,8 +56,13 @@ LOCAL_OVERRIDES_PACKAGES += \
    RandomMusicPlayer \
    RkMusic \
    Lightning \
-   Video
+   Video 
 
+PACKAGES.$(LOCAL_MODULE).OVERRIDES := \
+	RkVideoPlayer \
+	Rk3grExplorer \
+	RKVRExplorer \
+	RkExplorer
 
 LOCAL_SDK_VERSION := current
 

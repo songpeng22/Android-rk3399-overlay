@@ -3,13 +3,18 @@ package com.example.helloandroid;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+//
+import com.android.javamodule.*;
 
 public class MainActivity extends Activity {
+    private static JavaModule javaModule;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        javaModule.moduleLogTest();
     }
 
 
@@ -19,5 +24,5 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-    
+
 }
